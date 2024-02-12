@@ -80,7 +80,7 @@ int main()
             {
                 knightsHealth.append(std::to_string(knight.getHealth()), 0, 3);
             }
-            DrawText(knightsHealth.c_str(), 55.f, 45.f, 80, RED);
+            DrawText(knightsHealth.c_str(), 55.f, 45.f, 80.f, RED);
         }
 
         knight.tick(GetFrameTime());
@@ -112,7 +112,7 @@ int main()
             {
                 if (CheckCollisionRecs(knight.getWeaponCollisionRec(), enemy->getCollisionRec()))
                 {
-                    enemy->setAlive(false);
+                    enemy->takeDamage(knight.getDamage());
                 }
             }
         }

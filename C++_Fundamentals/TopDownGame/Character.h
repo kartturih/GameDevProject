@@ -13,6 +13,7 @@ public:
     Rectangle getWeaponCollisionRec() {return weaponCollisionRec;}
     float getHealth() const {return health;}
     void takeDamage(float damage);
+    int getDamage() const {return damage;}
 
 private:
     int windowWidth{};
@@ -20,6 +21,7 @@ private:
     Texture2D weapon{LoadTexture("characters/weapon_sword.png")};
     Rectangle weaponCollisionRec{};
     float health{100.f};
+    int damage{10};
 
 };
 #endif
